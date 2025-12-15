@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>one month anniversary</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#ffd6e8, #fff);
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .envelope {
+      width: 120px;
+      height: 80px;
+      background: #ff6f91;
+      position: relative;
+      margin: auto;
+      cursor: pointer;
+      animation: pop 1.5s ease;
+    }
+
+    .envelope::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-top: 40px solid #ff4f7a;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+
+    .message {
+      display: none;
+      margin-top: 30px;
+      color: #ff2f68;
+    }
+
+    .message h1 {
+      font-size: 28px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff6f91;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #ff4f7a;
+    }
+    .heart {
+        position: fixed;
+        bottom: -30px;
+        font-size: 22px;
+        color: rgba(255, 105, 135, 0.5);
+        animation: floatUp 12s linear infinite;
+        pointer-events: none;
+    }
+
+  </style>
+</head>
+<body>
+<span class="heart" style="left:15%;">❤️</span>
+<span class="heart" style="left:40%; animation-delay:3s;">💖</span>
+<span class="heart" style="left:65%; animation-delay:6s;">💕</span>
+<span class="heart" style="left:85%; animation-delay:2s;">❤️</span>
+
+  <div class="container">
+    <div class="envelope" onclick="openEnvelope()"></div>
+
+    <div class="message" id="message">
+      <h1>happy one month anniversary babeeeeeee💕💕❤️ ❤️</h1>
+      <p>one month of love memories and us</p>
+      <button class="btn" onclick="goNext()">continue</button>
+    </div>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    function goNext() {
+      window.location.href = "try.html";
+    }
+  </script>
+
+</body>
+</html>
